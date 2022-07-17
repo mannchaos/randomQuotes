@@ -1,0 +1,153 @@
+body {
+    background-color: #111;
+}
+
+.blockquote {
+    padding: 60px 80px 40px;
+    position: relative;
+}
+
+.blockquote p {
+    font-family: "Utopia-italic";
+    font-size: 35px;
+    font-weight: 700px;
+    text-align: center;
+}
+
+.blockquote p::before {
+    content: "\f095"; 
+    font-family: FontAwesome;
+   display: inline-block;
+   padding-right: 6px;
+   vertical-align: middle;
+  font-size: 180px;
+ }
+
+.blockquote:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+
+    content: "\f10d";
+    font-size: 200px;
+    color: rgba(0, 0, 0, 0.1);
+
+}
+
+.blockquote::after {
+    content: "";
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    border-bottom: 3px solid #bf0024;
+    height: 3px;
+    width: 200px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic);
+
+.otro-blockquote {
+    font-size: 1.4em;
+    width: 60%;
+    margin: 50px auto;
+    font-family: Open Sans;
+    font-style: italic;
+    color: #e1e1e1;
+    padding: 1.2em 30px 1.2em 75px;
+    border-left: 8px solid #7a18ec;
+    line-height: 1.6;
+    position: relative;
+    background: #111;
+}
+
+.otro-blockquote::before {
+    font-family: Arial;
+    content: "\201C";
+    color: #7a18ec;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.otro-blockquote::after {
+    content: '';
+}
+
+.otro-blockquote span {
+    display: block;
+    color: #7d7d7d;
+    font-style: normal;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+    --color-red: #ec1840;
+    --color-purple: #7a18ec;
+    --color-white: #fff;
+    --color-black-1: #111;
+    --color-black-2: #222;
+    --color-black-3: #444;
+    --speed-normal: 0.5s;
+    --speed-fast: 0.8s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--color-black-1);
+}
+
+#btn {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    margin: 20px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-white);
+    transition: var(--speed-normal);
+    border: 1px solid var(--color-red);
+}
+
+#btn:hover {
+        border: 1px solid transparent;
+        background: var(--color-purple) url(https://i.postimg.cc/FzBWFtKM/pixel2.png);
+        transition-delay: 0.8s;
+        background-size: 180px;
+        animation: animate var(--speed-fast) steps(8) forwards;
+    }
+#btn:last-of-type {
+        border: 1px solid var(--color-purple);
+} 
+            
+        
+    
+
+
+@keyframes animate {
+    0% {
+        background-position-y: 0;
+    }
+
+    100% {
+        background-position-y: -480px;
+    }
+}
